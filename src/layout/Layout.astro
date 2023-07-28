@@ -1,37 +1,28 @@
 ---
-import Head from "@components/Head.astro";
-import "@styles/global.css"
+import '@styles/global.css'
+import Head from '@components/Head.astro'
+import Header from '@components/Header.astro'
 
 interface Props {
-	title: string;
-	description: string;
-	ogImage?: {
-		src: string;
-		alt: string;
-	};
-	publishDate?: Date;
+  title: string
+  description: string
+  ogImage?: {
+    src: string
+    alt: string
+  }
+  publishDate?: Date
 }
 
-const {
-	title,
-	description,
-	publishDate = new Date(),
-} = Astro.props
-
+const { title, description, publishDate = new Date() } = Astro.props
 ---
 
 <!DOCTYPE html>
-<html
-	lang='en'
-	class='overflow-x-hidden'>
-	<Head 
-		title={title}
-		description={description}
-		publishDate={publishDate}
-	/>
-	<body class='bg-black text-white'>
-    <div class='relative z-20'>
-		  <slot />
+<html lang="en" class="overflow-x-hidden max-w-6xl mx-auto">
+  <Head title={title} description={description} publishDate={publishDate} />
+  <body class="bg-black text-white">
+    <div class="relative z-20">
+      <Header />
+      <slot />
     </div>
-	</body>
+  </body>
 </html>
