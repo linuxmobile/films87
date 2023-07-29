@@ -1,7 +1,14 @@
 ---
 import Logo from "./Logo.astro";
+import DesktopNav from "@components/DesktopNav.astro"
+import MobileNav from "@components/MobileNav.astro"
 
 ---
-<header class="w-full fixed top-0 bg-black/20 backdrop-blur-md py-4 px-3 z-30">
+<header class="w-full fixed top-0 bg-black/20 backdrop-blur-md py-4 px-3 z-10 flex items-center justify-between">
   <Logo />
+  <div class="sm:hidden flex flex-col gap-y-1 [&>div]:w-7 [&>div]:rounded-3xl [&>div]:h-[2px] [&>div]:bg-white">
+    <div class=""></div>
+    <div class=""></div>
+  </div>
+  <MobileNav />
 </header>

@@ -24,7 +24,7 @@ module.exports = {
 				},
 			},
       backgroundImage: {
-        hero: "url('/bg.webp')",
+        hero: "linear-gradient(to bottom, #00000000 60%, #000000), url('/bg.webp')",
       },
     },
 	},
