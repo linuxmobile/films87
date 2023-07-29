@@ -23,6 +23,9 @@ module.exports = {
 					'100%': { transform: 'translateX(0%)' },
 				},
 			},
+      backgroundImage: {
+        hero: "url('/bg.webp')",
+      },
     },
 	},
 	plugins: [],

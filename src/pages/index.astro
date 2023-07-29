@@ -1,7 +1,7 @@
 ---
 import Layout from "@layout/Layout.astro";
+import Header from "@components/Header.astro";
 import Hero from "@components/Hero.astro";
-import About from "@components/About.astro";
 
 const title = "Films87.Studio | Homepage"
 const description = "Films87.Studio | Homepage"
@@ -9,6 +9,6 @@ const description = "Films87.Studio | Homepage"
 ---
 
 <Layout {title} {description}>
+  <Header />
   <Hero />
-  <About />
 </Layout>
